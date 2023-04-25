@@ -112,10 +112,15 @@ async function createPost(title, body, image) {
 // Update an existing post - HTTP Method: DELETE
 async function deletePost(id) {
   const response = await fetch(`${endpoint}/posts/${id}.json`, { method: "DELETE" });
-  // DELETE fetch request
-  // check if response is ok - if the response is successful
-  // update the post grid to display posts
+  if (response.ok) {
+    console.log("Post successfully deleted from Firebase 🔥");
+    updatePostsGrid(); // Call your function to update the post grid
+  }
 }
+
+// DELETE fetch request
+// check if response is ok - if the response is successful
+// update the post grid to display posts
 
 // Delete an existing post - HTTP Method: PUT
 async function updatePost(id, title, body, image) {

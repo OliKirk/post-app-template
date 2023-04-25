@@ -36,7 +36,7 @@
         <input typ="text" id="title" name="title" placeholder="Your title here" /><br />
 
         <label for="body">Body</label><br />
-        <input type="text" id="body" name="bodt" placeholder="Give a description to your post" /><br />
+        <input type="text" id="body" name="body" placeholder="Give a description to your post" /><br />
 
         <label for="image">Image</label><br />
         <input type="url" id="image" name="image" placeholder="Put your image here" /><br />
@@ -44,17 +44,30 @@
         <button id="create-post-button">Create post</button>
       </form>
     </dialog>
+
     <!-- dialog - update post -->
-    <!-- to do  -->
+    <dialog id="d-update-post">
+      <form id="form-update-post">
+        <h2>Update post</h2>
+        <label for="title-update">Title:</label>
+        <input type="text" id="title-update" name="title" placeholder="Type a new title" />
+
+        <label for="body-update">Body:</label>
+        <input type="text" id="body-update" name="body" placeholder="Type a new body" />
+
+        <label for="image-update">Image:</label>
+        <input type="url" id="image-update" name="image" placeholder="New image here" />
+        <button>Update Post</button>
+      </form>
+    </dialog>
 
     <!-- dialog - delete post -->
-    <!-- to do  -->
-    <dialog id="dialog-delete-post" open>
+    <dialog id="dialog-delete-post">
       <h2>Do you want to delete post?</h2>
-      <p></p>
-      <form method="dialog" id="form-dele-post" action="">
-        <button type="button" class="btn-cancel">No</button>
+      <p id="dialog-delete-post-title">Title of post</p>
+      <form method="dialog" id="form-delete-post">
         <button>Yes</button>
+        <button type="button" class="btn-cancel">No</button>
       </form>
     </dialog>
 
