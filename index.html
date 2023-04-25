@@ -1,46 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="app.css" />
     <title>Post App</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <header>
-        <h1>Post App with Firebase REST API</h1>
-        <button id="btn-create-post">Create New Post</button>
+      <h1>Post App with Firebase REST API</h1>
+      <button id="btn-create-post">Create New Post</button>
     </header>
 
-
-
     <main>
+      <section>
+        <h2>Posts</h2>
+        <section id="posts" class="grid-container"></section>
+      </section>
 
-        <section>
-            <h2>Posts</h2>
-            <section id="posts" class="grid-container"></section>
-        </section>
-
-        <section>
-            <h2>Users</h2>
-            <section id="users" class="grid-container"></section>
-        </section>
+      <section>
+        <h2>Users</h2>
+        <section id="users" class="grid-container"></section>
+      </section>
     </main>
 
     <!-- dialog - create new post -->
     <!-- to do  -->
+    <dialog id="dialog-create-post">
+      <h2>Create new post</h2>
 
+      <form id="form-create-post" action="">
+        <label for="title">Title</label><br />
+        <input typ="text" id="title" name="title" placeholder="Your title here" /><br />
+
+        <label for="body">Body</label><br />
+        <input type="text" id="body" name="bodt" placeholder="Give a description to your post" /><br />
+
+        <label for="image">Image</label><br />
+        <input type="url" id="image" name="image" placeholder="Put your image here" /><br />
+
+        <button id="create-post-button">Create post</button>
+      </form>
+    </dialog>
     <!-- dialog - update post -->
     <!-- to do  -->
 
-
     <!-- dialog - delete post -->
     <!-- to do  -->
+    <dialog id="dialog-delete-post" open>
+      <h2>Do you want to delete post?</h2>
+      <p></p>
+      <form method="dialog" id="form-dele-post" action="">
+        <button type="button" class="btn-cancel">No</button>
+        <button>Yes</button>
+      </form>
+    </dialog>
 
     <script src="app.js"></script>
-</body>
-
+  </body>
 </html>
